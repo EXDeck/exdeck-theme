@@ -1,0 +1,26 @@
+@use "../func" as *;
+
+.btn {
+  min-width: var(--base-size);
+  min-height: var(--base-size);
+  color: var(--color-text);
+  user-select: none;
+  background-color: var(--color-fore);
+  border-radius: var(--base-radius);
+
+  @include transition(filter);
+  @include flex-center;
+
+  &.primary {
+    color: var(--color-text-on-accent);
+    background-color: var(--color-accent);
+
+    &:disabled {
+      filter: grayscale(1);
+    }
+  }
+
+  &.mask {
+    background-color: var(--color-mask);
+  }
+}

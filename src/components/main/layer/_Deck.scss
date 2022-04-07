@@ -1,0 +1,7 @@
+.deck {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--base-margin);
+  padding: var(--base-margin) 0;
+  overflow: hidden;
+}

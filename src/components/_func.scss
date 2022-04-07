@@ -1,0 +1,11 @@
+@mixin transition($property...) {
+  transition-timing-function: var(--transition-easing);
+  transition-duration: var(--transition-time);
+  transition-property: $property;
+}
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

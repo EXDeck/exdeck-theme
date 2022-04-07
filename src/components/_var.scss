@@ -1,0 +1,79 @@
+// Default theme light
+$l-color-fore: rgb(255 255 255);
+$l-color-back: rgb(241 243 245);
+$l-color-accent: rgb(1 89 247);
+$l-color-accent-alt: rgb(65 173 239);
+$l-color-warn: rgb(232 64 38);
+$l-color-mask: rgb(0 0 0 / 10%);
+$l-color-text: rgb(32 32 32);
+$l-color-text-on-accent: rgb(255 255 255);
+$l-color-text-mute: rgb(158 158 158);
+$l-color-separate: rgb(0 0 0 / 20%);
+$l-color-shadow: rgb(32 32 48 / 20%);
+
+// Default theme dark
+$d-color-fore: rgb(52 52 52);
+$d-color-back: rgb(0 0 0);
+$d-color-accent: rgb(65 173 239);
+$d-color-accent-alt: rgb(1 89 247);
+$d-color-warn: rgb(232 64 38);
+$d-color-mask: rgb(229 229 229 / 10%);
+$d-color-text: rgb(229 229 229);
+$d-color-text-mute: rgb(158 158 158);
+$d-color-text-on-accent: rgb(255 255 255);
+$d-color-separate: rgb(229 229 229 / 20%);
+$d-color-shadow: rgb(32 32 48 / 20%);
+
+// Default base size
+$base-size: 44px;
+$base-size-half: calc($base-size / 2);
+$base-size-quarter: calc($base-size / 4);
+$base-size-eighth: calc($base-size / 8);
+$base-margin: 8px;
+$base-margin-half: calc($base-margin / 2);
+$base-radius: $base-size-quarter;
+
+// Default animation
+$transition-time: 0.3s;
+$transition-easing: cubic-bezier(0.19, 1, 0.22, 1);
+$page-transition-time: calc($transition-time / 3);
+
+// CSS Variables
+:root {
+  --color-fore: #{$l-color-fore};
+  --color-back: #{$l-color-back};
+  --color-accent: #{$l-color-accent};
+  --color-accent-alt: #{$l-color-accent-alt};
+  --color-warn: #{$l-color-warn};
+  --color-mask: #{$l-color-mask};
+  --color-text: #{$l-color-text};
+  --color-text-mute: #{$l-color-text-mute};
+  --color-text-on-accent: #{$l-color-text-on-accent};
+  --color-separate: #{$l-color-separate};
+  --color-shadow: #{$l-color-shadow};
+
+  &.dark {
+    --color-fore: #{$d-color-fore};
+    --color-back: #{$d-color-back};
+    --color-accent: #{$d-color-accent};
+    --color-accent-alt: #{$d-color-accent-alt};
+    --color-warn: #{$d-color-warn};
+    --color-mask: #{$d-color-mask};
+    --color-text: #{$d-color-text};
+    --color-text-mute: #{$d-color-text-mute};
+    --color-text-on-accent: #{$d-color-text-on-accent};
+    --color-separate: #{$d-color-separate};
+    --color-shadow: #{$d-color-shadow};
+  }
+
+  --base-size: #{$base-size};
+  --base-size-half: #{$base-size-half};
+  --base-size-quarter: #{$base-size-quarter};
+  --base-size-eighth: #{$base-size-eighth};
+  --base-margin: #{$base-margin};
+  --base-margin-half: #{$base-margin-half};
+  --base-radius: #{$base-radius};
+  --transition-time: #{$transition-time};
+  --transition-easing: #{$transition-easing};
+  --page-transition-time: #{$page-transition-time};
+}

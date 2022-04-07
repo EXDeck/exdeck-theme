@@ -1,0 +1,10 @@
+.user-name {
+  > .name {
+    font-weight: bold;
+  }
+
+  > .screen-name {
+    font-size: 0.85em;
+    color: var(--color-text-mute);
+  }
+}

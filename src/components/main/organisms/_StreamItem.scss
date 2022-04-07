@@ -1,0 +1,63 @@
+.stream-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--base-margin);
+  padding: var(--base-margin);
+
+  > .retweet-user {
+    grid-column: 1/3;
+    overflow: hidden;
+    font-size: 0.8em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  > .profile-image-container {
+    width: var(--base-size);
+    height: var(--base-size);
+
+    > img {
+      width: 100%;
+      height: 100%;
+      border-radius: var(--base-radius);
+      object-fit: cover;
+    }
+  }
+
+  > .tweet {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: calc(var(--base-margin) * -1 + 0.5px);
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      content: "";
+      background-color: var(--color-separate);
+    }
+
+    > header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--base-margin);
+      height: var(--base-size-half);
+
+      > .user-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      > a {
+        font-size: 0.8em;
+        color: var(--color-text-mute);
+      }
+    }
+
+    > .tweet-text {
+      white-space: pre-wrap;
+    }
+  }
+}

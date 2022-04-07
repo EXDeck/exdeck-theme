@@ -1,0 +1,14 @@
+#main {
+  display: grid;
+  font-size: 14px;
+  line-height: var(--base-size-half);
+
+  > h1 {
+    display: none;
+  }
+
+  > * {
+    grid-row: 1;
+    grid-column: 1;
+  }
+}

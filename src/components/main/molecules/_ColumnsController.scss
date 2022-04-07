@@ -1,0 +1,14 @@
+.columns-controller {
+  display: flex;
+  flex-direction: column;
+  gap: var(--base-margin);
+  background-color: var(--color-fore);
+  border-radius: var(--base-radius);
+
+  > ol {
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-margin);
+    overflow-y: auto;
+  }
+}

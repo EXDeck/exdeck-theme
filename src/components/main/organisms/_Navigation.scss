@@ -1,0 +1,26 @@
+.navigation {
+  display: grid;
+  grid-template-rows: var(--base-size) auto auto var(--base-size);
+  gap: var(--base-margin);
+  width: var(--base-size);
+  margin-left: var(--base-margin);
+
+  > h2 {
+    display: none;
+  }
+
+  > .columns-controller {
+    align-self: start;
+  }
+
+  > .sub-actions {
+    align-self: end;
+  }
+
+  > .logo {
+    width: var(--base-size);
+    height: var(--base-size);
+    background-color: var(--color-fore);
+    border-radius: var(--base-radius);
+  }
+}
