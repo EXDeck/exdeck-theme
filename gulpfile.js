@@ -7,15 +7,14 @@ const header = require("gulp-header")
 
 const themeName = "harmony"
 
-const pack = require("./package.json")
-
-const licenseTexts = [
-  `${pack.name} v${pack.version}`,
-  `${pack.license} License`,
-  "https://github.com/MarinDeck/birdseye-theme-harmony",
-]
-
 const build = () => {
+  const pack = require("./package.json")
+  const licenseTexts = [
+    `${pack.name} v${pack.version}`,
+    `${pack.license} License`,
+    "https://github.com/MarinDeck/birdseye-theme-harmony",
+  ]
+
   return gulp
     .src("src/**/*.scss")
     .pipe(sassGlob())
