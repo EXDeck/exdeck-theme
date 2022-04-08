@@ -1,0 +1,13 @@
+@use "../../func" as *;
+
+.loading {
+  z-index: 9999;
+  background-color: var(--color-back);
+
+  @include flex-center;
+
+  > img {
+    width: min(300px, 90%);
+    height: auto;
+  }
+}

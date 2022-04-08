@@ -10,7 +10,7 @@
 
     + *::before {
       position: absolute;
-      top: calc(var(--base-margin) / 2 * -1 + 0.5px);
+      top: calc(var(--base-margin) / 2 * -1 - 0.5px);
       left: var(--base-size-quarter);
       display: block;
       width: calc(100% - var(--base-size-half));
