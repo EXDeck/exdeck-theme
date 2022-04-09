@@ -1,6 +1,7 @@
 .columns {
   display: flex;
   gap: var(--base-margin);
+  padding: var(--base-margin);
   overflow-x: auto;
 
   > h2 {

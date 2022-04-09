@@ -1,0 +1,16 @@
+.tweet-actions-btn {
+  display: flex;
+  gap: var(--base-margin);
+  min-width: calc(16px + var(--base-margin) * 2);
+  height: calc(16px + var(--base-margin) * 2);
+  padding: var(--base-margin);
+  line-height: 16px;
+
+  > .icon {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+  }
+}

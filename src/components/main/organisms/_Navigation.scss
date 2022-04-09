@@ -2,8 +2,9 @@
   display: grid;
   grid-template-rows: var(--base-size) auto auto var(--base-size);
   gap: var(--base-margin);
-  width: var(--base-size);
-  margin-left: var(--base-margin);
+  width: calc(var(--base-size) + var(--base-margin) * 2);
+  padding: var(--base-margin);
+  border-right: 1px solid var(--color-separate);
 
   > h2 {
     display: none;

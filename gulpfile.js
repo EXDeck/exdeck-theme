@@ -5,6 +5,10 @@ const rename = require("gulp-rename")
 const cleanCSS = require("gulp-clean-css")
 const header = require("gulp-header")
 
+require("dotenv").config()
+
+const cp = !!process.env.COPY
+
 const themeName = "harmony"
 
 const build = () => {
@@ -30,7 +34,15 @@ const build = () => {
 }
 exports.build = build
 
+const series = ["build"]
+cp && series.push("copy")
+
+const copy = () => {
+  return gulp.src("dist/*.css").pipe(gulp.dest(process.env.DIR))
+}
+exports.copy = copy
+
 const watch = () => {
-  return gulp.watch("src/**/*.scss", gulp.series(["build"]))
+  return gulp.watch("src/**/*.scss", gulp.series(series))
 }
 exports.watch = watch

@@ -3,6 +3,7 @@
 .icon-btn {
   width: calc(var(--base-size) - var(--base-margin-half) * 2);
   height: calc(var(--base-size) - var(--base-margin-half) * 2);
+  border-radius: 100%;
 
   @include flex-center;
 }
