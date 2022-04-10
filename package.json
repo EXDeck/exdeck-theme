@@ -7,7 +7,10 @@
     "build": "gulp build",
     "watch": "gulp watch",
     "lint": "stylelint 'src/**/*.{css,scss}'",
-    "fix": "stylelint --fix 'src/**/*.{css,scss}'"
+    "fix": "stylelint --fix 'src/**/*.{css,scss}'",
+    "ver:patch": "npm version patch && yarn build",
+    "ver:minor": "npm version minor && yarn build",
+    "ver:major": "npm version major && yarn build"
   },
   "repository": "https://github.com/MarinDeck/birdseye-theme-harmony.git",
   "author": "hakunagi <hakunagi.rei@gmail.com>",

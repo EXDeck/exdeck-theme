@@ -23,6 +23,16 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: Chirp;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("https://abs.twimg.com/fonts/chirp-regular-web.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
 ::-webkit-scrollbar {
   width: var(--base-margin);
   height: var(--base-margin);
@@ -93,6 +103,7 @@ body,
     "Hiragino Kaku Gothic ProN",
     "メイリオ",
     Meiryo,
+    Chirp,
     sans-serif;
   font-size: 16px;
   color: var(--color-text);
