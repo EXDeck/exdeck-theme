@@ -1,4 +1,5 @@
 .tweet-actions {
   display: flex;
   justify-content: space-between;
+  margin: calc(var(--base-margin) * -1);
 }

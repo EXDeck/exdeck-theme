@@ -1,19 +1,35 @@
 .tweet {
+  overflow: hidden;
+
   > header {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: var(--base-margin);
     height: var(--base-size-half);
 
-    > .user-name {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
     > a {
       font-size: 0.8em;
       color: var(--color-text-mute);
+    }
+  }
+
+  > .other-replies {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    >.icon {
+      width: 22px;
+      height: 22px;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+    }
+
+    > a + a {
+      margin-left: var(--base-margin-half);
     }
   }
 

@@ -1,8 +1,15 @@
 .user-name {
+  display: inline-flex;
+  gap: var(--base-margin-half);
+  overflow: hidden;
   color: var(--color-text);
 
   > .name {
+    display: block;
+    overflow: hidden;
     font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   > .screen-name {
