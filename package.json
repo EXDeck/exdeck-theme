@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
+    "cp": "gulp copy",
     "watch": "gulp watch",
     "lint": "stylelint 'src/**/*.{css,scss}'",
     "fix": "stylelint --fix 'src/**/*.{css,scss}'",
-    "ver:patch": "npm version patch && yarn build",
-    "ver:minor": "npm version minor && yarn build",
-    "ver:major": "npm version major && yarn build"
+    "ver:patch": "npm version patch && yarn build && yarn cp",
+    "ver:minor": "npm version minor && yarn build && yarn cp",
+    "ver:major": "npm version major && yarn build && yarn cp"
   },
   "repository": "https://github.com/MarinDeck/birdseye-theme-harmony.git",
   "author": "hakunagi <hakunagi.rei@gmail.com>",
