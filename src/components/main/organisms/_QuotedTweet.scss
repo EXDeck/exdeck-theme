@@ -1,0 +1,15 @@
+.quoted-tweet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--base-margin);
+  padding: var(--base-margin);
+
+  // background-color: var(--color-mask-mute);
+
+  border: 1px solid var(--color-separate);
+  border-radius: var(--base-radius);
+
+  >.tweet {
+    color: var(--color-text-mute);
+  }
+}

@@ -1,0 +1,28 @@
+.tweet-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--base-margin-half);
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--base-radius);
+
+  img {
+    flex-grow: 1;
+    width: calc(50% - var(--base-margin-half) / 2);
+    height: calc(50% - var(--base-margin-half) / 2);
+    object-fit: cover;
+  }
+
+  &:is(.images-1,.images-2) img {
+    height: 100%;
+  }
+
+  &.images-3 {
+    flex-direction: column;
+
+    img:first-child {
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.tweet {
+  > header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--base-margin);
+    height: var(--base-size-half);
+
+    > .user-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    > a {
+      font-size: 0.8em;
+      color: var(--color-text-mute);
+    }
+  }
+
+  > .tweet-text {
+    white-space: pre-wrap;
+  }
+}
