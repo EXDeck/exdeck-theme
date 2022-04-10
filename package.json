@@ -1,6 +1,6 @@
 {
   "name": "birdseye-theme-harmony",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "birdseye-frontend's default theme",
   "main": "index.js",
   "scripts": {
