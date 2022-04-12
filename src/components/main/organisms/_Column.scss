@@ -5,6 +5,7 @@
   grid-template-rows: auto 1fr;
   width: 350px;
   min-width: 350px;
+  overflow: hidden;
   background-color: var(--color-fore);
   border-radius: var(--base-radius);
 

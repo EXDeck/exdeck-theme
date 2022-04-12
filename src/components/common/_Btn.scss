@@ -11,6 +11,14 @@
   @include transition(filter);
   @include flex-center;
 
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:is(:hover,:focus):not(:disabled) {
+    filter: brightness(0.8);
+  }
+
   &.primary {
     color: var(--color-text-on-accent);
     background-color: var(--color-accent);

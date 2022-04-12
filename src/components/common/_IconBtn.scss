@@ -3,7 +3,19 @@
 .icon-btn {
   width: calc(var(--base-size) - var(--base-margin-half) * 2);
   height: calc(var(--base-size) - var(--base-margin-half) * 2);
+  color: var(--color-text);
+  user-select: none;
+  background-color: var(--color-fore);
   border-radius: 100%;
 
+  @include transition(filter);
   @include flex-center;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:is(:hover,:focus):not(:disabled) {
+    filter: brightness(0.8);
+  }
 }
