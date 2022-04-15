@@ -1,0 +1,22 @@
+@use "../../func" as *;
+
+@keyframes kurukuru {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.loading-container {
+  width: 100%;
+  height: 100%;
+
+  @include flex-center;
+
+  > * {
+    animation: 1s linear infinite running kurukuru;
+  }
+}
