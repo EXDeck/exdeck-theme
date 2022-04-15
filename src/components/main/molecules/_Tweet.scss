@@ -2,14 +2,16 @@
   overflow: hidden;
 
   > header {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     gap: var(--base-margin);
+    align-items: baseline;
+    justify-content: space-between;
     height: var(--base-size-half);
 
-    > a {
+    > .date-time {
       font-size: 0.8em;
       color: var(--color-text-mute);
+      white-space: nowrap;
     }
   }
 

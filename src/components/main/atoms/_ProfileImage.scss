@@ -1,0 +1,10 @@
+.profile-image {
+  display: block;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--base-radius);
+    object-fit: cover;
+  }
+}

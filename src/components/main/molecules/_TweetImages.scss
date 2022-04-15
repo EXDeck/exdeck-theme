@@ -7,21 +7,26 @@
   overflow: hidden;
   border-radius: var(--base-radius);
 
-  img {
+  a {
     flex-grow: 1;
     width: calc(50% - var(--base-margin-half) / 2);
     height: calc(50% - var(--base-margin-half) / 2);
-    object-fit: cover;
+
+    >img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
-  &:is(.images-1,.images-2) img {
+  &:is(.images-1,.images-2) a {
     height: 100%;
   }
 
   &.images-3 {
     flex-direction: column;
 
-    img:first-child {
+    a:first-child {
       height: 100%;
     }
   }

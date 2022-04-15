@@ -20,6 +20,8 @@
   }
 
   > .retweet-user {
+    display: flex;
+    gap: var(--base-margin-half);
     overflow: hidden;
     font-size: 0.8em;
     text-overflow: ellipsis;

@@ -1,6 +1,7 @@
-.user-name {
-  display: inline-flex;
+.username {
+  display: flex;
   gap: var(--base-margin-half);
+  align-items: baseline;
   overflow: hidden;
   color: var(--color-text);
 
