@@ -43,17 +43,21 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-mask);
+  background-color: var(--color-mask);
 
-  @include transition(filter);
+  @include transition(background-color);
 
   &:hover {
-    background: var(--color-separate);
+    background-color: var(--color-mask-bold);
+  }
+
+  &:active {
+    background-color: var(--color-mask-bolder);
   }
 }
 
 * {
-  scrollbar-width: thin;
+  // scrollbar-width: thin;
   scrollbar-color: var(--color-separate) var(--color-mask);
 }
 

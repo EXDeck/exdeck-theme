@@ -13,6 +13,7 @@
 
   &:disabled {
     cursor: not-allowed;
+    filter: grayscale(1);
   }
 
   &:is(:hover,:focus):not(:disabled) {
@@ -22,10 +23,6 @@
   &.primary {
     color: var(--color-text-on-accent);
     background-color: var(--color-accent);
-
-    &:disabled {
-      filter: grayscale(1);
-    }
   }
 
   &.mask {
