@@ -7,7 +7,8 @@ const header = require("gulp-header")
 
 require("dotenv").config()
 
-const cp = !!process.env.COPY
+const cp = !(process.env.COPY === "false")
+console.log(cp)
 
 const themeName = "harmony"
 
@@ -38,7 +39,9 @@ const series = ["build"]
 cp && series.push("copy")
 
 const copy = () => {
-  return gulp.src("dist/*.css").pipe(gulp.dest(process.env.DIR))
+  if (cp) {
+    return gulp.src("dist/*.css").pipe(gulp.dest(process.env.DIR))
+  }
 }
 exports.copy = copy
 

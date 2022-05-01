@@ -1,0 +1,113 @@
+@use "./var";
+@use "./func" as *;
+
+@font-face {
+  font-family: "HarmonyOS Sans";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("HarmonyOS Sans"),
+    url("../fonts/HarmonyOS_Sans/HarmonyOS_Sans_Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Material Icons"),
+    url("https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2")
+    format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: Chirp;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("https://abs.twimg.com/fonts/chirp-regular-web.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+::-webkit-scrollbar {
+  width: var(--base-margin);
+  height: var(--base-margin);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-mask);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-mask);
+
+  @include transition(background-color);
+
+  &:hover {
+    background-color: var(--color-mask-bold);
+  }
+
+  &:active {
+    background-color: var(--color-mask-bolder);
+  }
+}
+
+* {
+  // scrollbar-width: thin;
+  scrollbar-color: var(--color-separate) var(--color-mask);
+}
+
+i {
+  width: 1em;
+  height: 1em;
+  font-family: "Material Icons", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-feature-settings: "liga";
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  user-select: none;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-accent);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+html,
+body,
+#root {
+  width: max(100%, 200px);
+  height: max(100%, 200px);
+  overflow: hidden;
+}
+
+#root {
+  font-family:
+    "HarmonyOS Sans",
+    "Noto Sans JP",
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "メイリオ",
+    Meiryo,
+    Chirp,
+    sans-serif;
+  font-size: 16px;
+  color: var(--color-text);
+  background: var(--color-back);
+}
