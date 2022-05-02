@@ -97,7 +97,7 @@ body,
   overflow: hidden;
 }
 
-#root {
+body {
   font-family:
     "HarmonyOS Sans",
     "Noto Sans JP",
@@ -109,5 +109,5 @@ body,
     sans-serif;
   font-size: 16px;
   color: var(--color-text);
-  background: var(--color-back);
+  background-color: var(--color-back);
 }

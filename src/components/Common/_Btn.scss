@@ -1,0 +1,31 @@
+@use "../func" as *;
+
+.btn {
+  min-width: var(--base-size);
+  min-height: var(--base-size);
+  color: var(--color-text);
+  user-select: none;
+  background-color: var(--color-fore);
+  border-radius: var(--base-radius);
+
+  @include transition(filter);
+  @include flex-center;
+
+  &:disabled {
+    cursor: not-allowed;
+    filter: grayscale(1);
+  }
+
+  &:is(:hover,:focus):not(:disabled) {
+    filter: brightness(0.8);
+  }
+
+  &.primary {
+    color: var(--color-text-on-accent);
+    background-color: var(--color-accent);
+  }
+
+  &.mask {
+    background-color: var(--color-mask);
+  }
+}

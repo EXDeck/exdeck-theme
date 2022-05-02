@@ -3,6 +3,10 @@
   width: 100%;
   height: 100%;
 
+  > h1 {
+    display: none;
+  }
+
   > * {
     grid-row: 1;
     grid-column: 1;
