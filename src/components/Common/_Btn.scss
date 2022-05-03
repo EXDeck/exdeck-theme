@@ -1,23 +1,41 @@
 @use "../func" as *;
 
 .btn {
+  position: relative;
   min-width: var(--base-size);
   min-height: var(--base-size);
+  overflow: hidden;
   color: var(--color-text);
   user-select: none;
   background-color: var(--color-fore);
   border-radius: var(--base-radius);
+  outline: 0;
 
-  @include transition(filter);
+  @include transition(color, background-color);
   @include flex-center;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+
+    @include transition(background-color);
+  }
 
   &:disabled {
     cursor: not-allowed;
-    filter: grayscale(1);
+
+    &::after {
+      background-color: var(--color-mask-boldest);
+    }
   }
 
-  &:is(:hover,:focus):not(:disabled) {
-    filter: brightness(0.8);
+  &:is(:hover, :focus):not(:disabled)::after {
+    background-color: var(--color-mask-bold);
   }
 
   &.primary {
