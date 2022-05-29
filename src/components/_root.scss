@@ -1,5 +1,6 @@
 @use "./var";
 @use "./func" as *;
+@use "./transition";
 
 @font-face {
   font-family: "HarmonyOS Sans";
@@ -110,4 +111,18 @@ body {
   font-size: 16px;
   color: var(--color-text);
   background-color: var(--color-back);
+}
+
+#root {
+  display: grid;
+
+  > * {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  > .loading {
+    z-index: 9999;
+    background-color: var(--color-back);
+  }
 }

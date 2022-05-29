@@ -5,4 +5,10 @@
   height: 100%;
 
   @include flex-center;
+
+  > .logo {
+    width: min(450px, 90%);
+    height: min(450px, 90%);
+    object-fit: contain;
+  }
 }

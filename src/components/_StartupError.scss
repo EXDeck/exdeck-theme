@@ -1,0 +1,14 @@
+@use "./func" as *;
+
+#startup-error {
+  flex-direction: column;
+  gap: var(--base-margin);
+  width: 100%;
+  height: 100%;
+
+  @include flex-center;
+
+  > h1 {
+    font-size: 2em;
+  }
+}
