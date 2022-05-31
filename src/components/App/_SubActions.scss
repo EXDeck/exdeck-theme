@@ -1,0 +1,7 @@
+.sub-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--base-margin);
+  background-color: var(--color-fore);
+  border-radius: var(--base-radius);
+}
