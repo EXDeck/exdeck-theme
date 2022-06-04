@@ -12,14 +12,17 @@ console.log(cp)
 
 const themeName = "harmony"
 
-const build = () => {
-  const pack = require("./package.json")
-  const licenseTexts = [
+function getLicenseText() {
+  delete require.cache[`${__dirname}/package.json`]
+  const pack = require(`${__dirname}/package.json`)
+  return [
     `${pack.name} v${pack.version}`,
     `${pack.license} License`,
     "https://github.com/MarinDeck/birdseye-theme-harmony",
   ]
+}
 
+const build = () => {
   return gulp
     .src("src/**/*.scss")
     .pipe(sassGlob())
@@ -29,7 +32,7 @@ const build = () => {
         basename: themeName + ".min",
       })
     )
-    .pipe(header(`/*! ${licenseTexts.join(" | ")} */`))
+    .pipe(header(`/*! ${getLicenseText().join(" | ")} */`))
     .pipe(cleanCSS())
     .pipe(gulp.dest("dist/"))
 }
