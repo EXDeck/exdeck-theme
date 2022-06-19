@@ -1,6 +1,6 @@
-# birdseye-theme-harmony
+# exdeck-themes
 
-birdseye-frontend's default theme
+exdeck-frontend's default theme
 
 ## build
 
