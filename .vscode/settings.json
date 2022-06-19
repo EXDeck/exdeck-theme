@@ -4,5 +4,8 @@
   "stylelint.validate": ["css", "scss"],
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": true
-  }
+  },
+  "cSpell.words": [
+    "exdeck"
+  ]
 }

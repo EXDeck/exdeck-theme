@@ -1,7 +1,7 @@
 {
-  "name": "birdseye-theme-harmony",
+  "name": "exdeck-theme",
   "version": "0.0.17",
-  "description": "birdseye-frontend's default theme",
+  "description": "exdeck-frontend's default theme",
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
@@ -13,7 +13,7 @@
     "ver:minor": "npm version minor && yarn build && yarn cp",
     "ver:major": "npm version major && yarn build && yarn cp"
   },
-  "repository": "https://github.com/MarinDeck/birdseye-theme-harmony.git",
+  "repository": "https://github.com/EXDeck/exdeck-theme.git",
   "author": "hakunagi <hakunagi.rei@gmail.com>",
   "license": "MIT",
   "private": true,

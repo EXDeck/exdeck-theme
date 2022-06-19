@@ -18,7 +18,7 @@ function getLicenseText() {
   return [
     `${pack.name} v${pack.version}`,
     `${pack.license} License`,
-    "https://github.com/MarinDeck/birdseye-theme-harmony",
+    "https://github.com/EXDeck/exdeck-theme",
   ]
 }
 
